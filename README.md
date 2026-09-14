@@ -1,8 +1,8 @@
-# 🛡️ EnvSafe (CipherDrop)
+# 🛡️ CipherVault
 
 > **Zero-Knowledge End-to-End Encrypted (E2EE) Temporary Room & Secret Sharing Platform**
 
-EnvSafe is a secure, ephemeral file and secret sharing web application built to eliminate plain-text credential leaks across persistent communication channels (Slack, Discord, Email, WhatsApp). By utilizing client-side **AES-256-GCM encryption** via the Web Crypto API, secret decryption keys remain isolated within the browser hash fragment (`#KEY`) and are never sent to the server.
+CipherVault is a secure, ephemeral file and secret sharing web application built to eliminate plain-text credential leaks across persistent communication channels (Slack, Discord, Email, WhatsApp). By utilizing client-side **AES-256-GCM encryption** via the Web Crypto API, secret decryption keys remain isolated within the browser hash fragment (`#KEY`) and are never sent to the server.
 
 ---
 
