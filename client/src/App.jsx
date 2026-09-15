@@ -21,7 +21,7 @@ export default function App() {
           </Routes>
         </main>
         <footer className="py-6 border-t border-slate-900 text-center text-xs font-mono text-slate-500 space-y-1">
-          <p>CipherDrop — E2EE Temporary Room Sharing Platform</p>
+          <p>CipherVault — E2EE Temporary Room Sharing Platform</p>
           <p className="text-[10px] text-slate-600">The server manages the room, but never knows the secret.</p>
         </footer>
       </div>
