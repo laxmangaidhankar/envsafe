@@ -1,13 +1,12 @@
 import { io } from 'socket.io-client';
+import config from '../config/env';
 
 let socket = null;
 
 export const getSocket = () => {
   if (!socket) {
     // In development with Vite proxy, use window.location.origin or explicit port 3000
-    const socketUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
-      ? 'http://localhost:3000' 
-      : window.location.origin;
+  const socketUrl = config.socketUrl;
 
     socket = io(socketUrl, {
       autoConnect: false,

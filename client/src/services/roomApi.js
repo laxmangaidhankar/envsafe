@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+import config from '../config/env';
+
+const API_BASE = config.apiBaseUrl;
 
 const api = axios.create({
   baseURL: API_BASE,
@@ -11,7 +13,7 @@ const api = axios.create({
 
 export const roomApi = {
   createRoom: async (durationMinutes = 10, maxParticipants = 2) => {
-    const response = await api.post('v1/rooms', {
+    const response = await api.post('/v1/rooms', {
       durationMinutes,
       maxParticipants
     });
@@ -19,27 +21,29 @@ export const roomApi = {
   },
 
   getRoom: async (roomId) => {
-    const response = await api.get(`v1/rooms/${roomId}`);
+    const response = await api.get(`/v1/rooms/${roomId}`);
     return response.data;
   },
 
   destroyRoom: async (roomId) => {
-    const response = await api.delete(`v1/rooms/${roomId}`);
+    const response = await api.delete(`/v1/rooms/${roomId}`);
     return response.data;
   },
 
   uploadFile: async (roomId, filePayload) => {
-    const response = await api.post(`v1/rooms/files/${roomId}`, filePayload);
+    const response = await api.post(`/v1/rooms/files/${roomId}`, filePayload);
     return response.data;
   },
 
   getFiles: async (roomId) => {
-    const response = await api.get(`v1/rooms/files/${roomId}`);
+    const response = await api.get(`/v1/rooms/files/${roomId}`);
     return response.data;
   },
 
   deleteFile: async (roomId, fileId) => {
-    const response = await api.delete(`v1/rooms/files/${roomId}/${fileId}`);
+    const response = await api.delete(
+      `/v1/rooms/files/${roomId}/${fileId}`
+    );
     return response.data;
   }
 };
