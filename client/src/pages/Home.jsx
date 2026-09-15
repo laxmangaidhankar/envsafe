@@ -28,7 +28,7 @@ export default function Home() {
         </h1>
 
         <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          CipherDrop creates short-lived, end-to-end encrypted rooms. Your browser encrypts files locally using <strong className="text-slate-200">AES-256-GCM</strong> before sending ciphertext. Secrets auto-delete on expiry.
+          CipherVault creates short-lived, end-to-end encrypted rooms. Your browser encrypts files locally using <strong className="text-slate-200">AES-256-GCM</strong> before sending ciphertext. Secrets auto-delete on expiry.
         </p>
 
         {/* Primary Action Callouts */}
@@ -70,7 +70,7 @@ export default function Home() {
       {/* Workflow Step Diagram */}
       <div className="glass-card rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
         <h2 className="text-xl font-bold text-white tracking-tight text-center">
-          How CipherDrop Works
+          How CipherVault Works
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
